@@ -1,5 +1,4 @@
 
 
 class HoneyCalculator:
-
-    @staticmethod
+    pass

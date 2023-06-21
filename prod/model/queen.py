@@ -2,20 +2,29 @@ from prod.model.bee import Bee
 
 
 class Queen(Bee):
-    def __init__(self, name, type, production):
-        super().__init__(name, type)
-        self._production = production
+    def __init__(self, name, type, job = "Queen"):
+        super().__init__(type, job)
+        self._name = name
 
     @property
     def name(self):
         return self._name
 
-    @property
-    def type(self):
-        return self._type
+    @name.setter
+    def name(self, name):
+        self._name = name
 
-    @property
-    def production(self):
-        return self._production
+    @name.deleter
+    def name(self):
+        del self._name
 
+
+
+    # @property
+    # def type(self):
+    #     return self._type
+    #
+    # @property
+    # def job(self):
+    #     return self._job
 
